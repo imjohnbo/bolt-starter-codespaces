@@ -2,6 +2,6 @@
   "name": "Getting started with Bolt",
   "extensions": ["felipe-mendes.slack-theme"],
   "forwardPorts": [3000],
-  "initializeCommand": "npm i && echo 'Your dev environment is lookin good!'",
+  "preCreateCommand": "npm i && echo 'Your dev environment is lookin good!'",
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node"
 }
