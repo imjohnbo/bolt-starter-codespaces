@@ -1,7 +1,0 @@
-{
-  "name": "Getting started with Bolt",
-  "extensions": ["felipe-mendes.slack-theme"],
-  "appPort": [3000],
-  "postCreateCommand": "npm i && echo 'Your dev environment is lookin good!'",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node"
-}

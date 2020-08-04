@@ -1,0 +1,5 @@
+{
+  "name": "Getting started with Bolt",
+  "extensions": ["felipe-mendes.slack-theme"],
+  "forwardPorts": [3000]
+}
