@@ -2,9 +2,10 @@
 
 This is a simple [Slack's Bolt⚡️](https://slack.dev/bolt/) app template. This README covers the following ways to start building your awesome Slack apps.
 
-* [CodeSandbox](https://codesandbox.io/): Step 1 -> Step 2A
-* [Glitch](https://glitch.com/): Step 1 -> Step 2B
-* On your local machine (Linux/macOS/Windows): Step 1 -> Step 2C
+* [GitHub Codespaces](https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces): Step 1 -> Step 2A
+* [CodeSandbox](https://codesandbox.io/): Step 1 -> Step 2B
+* [Glitch](https://glitch.com/): Step 1 -> Step 2C
+* On your local machine (Linux/macOS/Windows): Step 1 -> Step 2D
 
 ---
 
@@ -38,7 +39,38 @@ Access **Settings > Install App** from the left sidebar. You'll configure more l
 
 ---
 
-## (Step 2A) CodeSandbox Setup
+## (Step 2A) GitHub Codespaces Setup
+
+Sign up for the Codespaces beta [here](https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces).
+
+### Generate new repo based on template
+
+Click the "Use this template" button at https://github.com/seratch/bolt-starter.
+
+In your generated repository, click on Code -> Open with Codespaces. When your Codespace is ready, duplicate the `_env` file and name it as `.env`. Paste in the following values from above:
+
+* SLACK_SIGNING_SECRET: Use the value you can find at **Basic Information > App Credentials > Signing Secret**
+* SLACK_BOT_TOKEN: Use the Bot User OAuth Access Token (starting with `xoxb-`) you can find at **Settings > Install App**
+
+### Set Request URLs (Slack App)
+
+Click on "Remote explorer" -> "Port: 3000" to open the forwarded app in a new tab.
+
+Tell Slack about this URL in the following locations:
+
+* `https://api.slack.com/apps/{APP_ID}/event-subscriptions`
+* `https://api.slack.com/apps/{APP_ID}/slash-commands`
+* `https://api.slack.com/apps/{APP_ID}/interactive-messages`
+
+### Re-install Slack App to your workspace
+
+`https://api.slack.com/apps/{APP_ID}/install-on-team`
+
+<img src="https://github.com/seratch/bolt-starter/raw/master/images/oauth_installation.png" width=400 />
+
+---
+
+## (Step 2B) CodeSandbox Setup
 
 ### Sign in with your GitHub account
 
@@ -94,7 +126,7 @@ You need to configure the following three settings with the URL.
 
 ---
 
-## (Step 2B) Glitch Setup
+## (Step 2C) Glitch Setup
 
 https://glitch.com/
 
@@ -135,7 +167,7 @@ You can go with `https://{some-fancy-name}.glitch.me/slack/events` for all of th
 
 ---
 
-## (Step 2C) Your Local Machine Setup
+## (Step 2D) Your Local Machine Setup
 
 ### ngrok Setup
 
