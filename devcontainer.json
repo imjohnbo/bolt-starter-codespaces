@@ -3,6 +3,6 @@
   "settings": {},
   "extensions": ["felipe-mendes.slack-theme"],
   "forwardPorts": [3000],
-  "postCreateCommand": "npm i && echo 'Your environment awaits you!'",
+  "initializeCommand": "npm i"
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node"
 }
